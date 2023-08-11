@@ -4,7 +4,7 @@ ActiveRecord::Schema.define do
   self.verbose = false
 
   create_table :bars, id: false do |t|
-    t.string :id, index: { unique: true } # , primary_key: true
+    t.string :id, index: { unique: true }, primary_key: true
     t.string :name
     t.timestamps
   end

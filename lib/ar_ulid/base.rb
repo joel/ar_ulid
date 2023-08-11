@@ -15,7 +15,7 @@ module ArUlid
     end
 
     def internal_primary_key
-      :id
+      self.class.primary_key
     end
   end
 end
