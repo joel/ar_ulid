@@ -2,7 +2,6 @@
 
 require "rails/railtie"
 require "active_record"
-
 require "ar_ulid"
 
 module ArUlid

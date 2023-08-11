@@ -8,9 +8,8 @@ module ArUlid
     class Ulid < Base
       class << self
         def generate_id
-          time = Time.now
-          an_event_identifier = SecureRandom.uuid
-          ULID.generate(time, suffix: an_event_identifier)
+          time = ArUlid.configuration.time_method.call
+          ULID.generate(time, suffix: SecureRandom.uuid)
         end
       end
     end
