@@ -18,11 +18,11 @@ module ArUlid
   RSpec.describe Base do
     subject(:instance) { Foo.new }
 
-    it "includes ArUlid" do
+    it "generates an uid" do
       expect(instance.id).to match(/\A\w{26}\z/)
     end
 
-    it "generates an id" do
+    it "does not override the primary key" do
       expect do
         instance.save!
       end.not_to change(instance, :id)

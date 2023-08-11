@@ -26,7 +26,7 @@ RSpec.describe ArUlid do
     Bar.include(Hook)
   end
 
-  it "generates an id" do
+  it "generates an uid" do
     expect(Bar.new.id).to match(/\A\w{26}\z/)
   end
 end
