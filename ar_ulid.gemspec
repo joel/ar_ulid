@@ -34,6 +34,10 @@ Gem::Specification.new do |spec|
 
   # Uncomment to register a new dependency of your gem
 
+  spec.add_dependency "activerecord"
+  spec.add_dependency "activesupport"
+  spec.add_dependency "rails"
+  spec.add_dependency "railties"
   spec.add_dependency "zeitwerk"
   # spec.add_dependency "example-gem", "~> 1.0"
 
