@@ -2,6 +2,7 @@
 
 require "zeitwerk"
 loader = Zeitwerk::Loader.for_gem
+loader.ignore("ar_ulid/railtie")
 loader.setup
 
 require "active_support"
@@ -17,7 +18,9 @@ module ArUlid
 
   class_methods do
     def has_ulid
-      include Base
+      include Base unless include?(Base)
     end
   end
 end
+
+require "ar_ulid/railtie" if defined?(Rails::Railtie)
